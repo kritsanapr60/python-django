@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kritsana.com</title>
+    {% load static %}
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+body {
+  min-height: 500px;
+  padding-top: 70px;
+  background: #DFFFFE;
+}
+.jumbotron {
+    margin-bottom: 0px;
+    height: 300px;
+    color: white;
+    <!--text-shadow: black 0.3em 0.3em 0.3em;-->
+    background: transparent;
+    background-color: #009B94;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">kritsana.com</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><i class="glyphicon glyphicon-home"> Home</i> <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">ผู้จัดทำ</a></li>
+         <li class="dropdown active">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-th-large"> บทเรียน HTML 5 </i> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'chap1' %}">บทที่ 1 HTML5 คืออะไร</a></li>
+            <li><a href="{% url 'chap2' %}">บทที่ 2 HTML5 new Elements  </a></li>
+            <li><a href="{% url 'chap3' %}">บทที่ 3 HTML5 Canvas</a></li>
+            <li><a href="{% url 'chap4' %}">บทที่ 4 HTML5 SVG  </a></li>
+            <li><a href="{% url 'chap5' %}">บทที่ 5 drag and drop </a></li>
+            <li><a href="{% url 'chap6' %}">บทที่ 6 HTML5 video</a></li>
+            <li><a href="{% url 'chap7' %}">บทที่ 7 HTML5 audio </a></li>
+            <li><a href="{% url 'chap8' %}">บทที่ 8  New Input Types 1</a></li>
+            <li><a href="{% url 'chap9' %}">บทที่ 9 HTML5 Web Storage</a></li>
+            <li><a href="{% url 'chap10' %}">บทที่ 10 HTML5 Application Cache </a></li>
+            <li><a href="{% url 'chap11' %}">บทที่ 11 HTML5 SSE</a></li>
+            <li><a href="{% url 'chap12' %}">บทที่ 12 HTML5 Form Elements ตอนที่ 1</a></li>
+            <li><a href="{% url 'chap13' %}">บทที่ 13 HTML5 Web Worker</a></li>
+            <li><a href="{% url 'chap14' %}">บทที่ 14 HTML5 Geolocation ตอนที่ 2</a></li>
+            <li><a href="{% url 'chap15' %}">บทที่ 15 HTML5 Form Attributes ตอนที่ 1 </a></li>
+            <li><a href="{% url 'chap16' %}">บทที่ 15 HTML5 Form Attributes ตอนที่ 2 </a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#"><i style="font-size:15px" class="fa">&#xf13b;</i> Credit link: mindphp.com </a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#"><i style="font-size:15px" class="fa">&#xf09a;</i> Facebook : Kritsana Prasit</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       <li class="active "><a href="#">เข้าสู่ระบบ</a></li>
+       <li><a href="http://localhost:8000/admin/myapp/entry/add/">เเจ้งประกาศ Admin</a></li>
+        <!---<button type="button" id="btn" class="btn navbar-btn btn-danger" data-toggle="modal" data-target="#myModalHorizontal"><i class="glyphicon glyphicon-log-in"></i> เข้าสู่ระบบ</button>-->
+        <!--<li><a href="#"><span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#exampleModal"></span> Sign in</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-pencil"></span> Register</a>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+</div>
+</nav>
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="{% static 'myapp/img/benner.jpg' %}"  style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="{% static 'myapp/img/benner2.jpg' %}"  style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="{% static 'myapp/img/bener3.jpg' %}"  style="width:100%;">
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="col-md-3">
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+      <i class="glyphicon glyphicon-log-in"> ลิงค์ภายนอก</i>
+    </div>
+    <div class="panel-body">
+      <div class="wrapper">
+        <table width="100%" border="0" cellspacing="2" cellpadding="2">
+          <tr style="border-bottom: dashed 1px #cccccc" bgcolor="#FFFFFF" >
+          </tr>
+          <tr style="border-bottom: dashed 1px #cccccc"  bgcolor="#FFFFFF" onMouseOver="bgColor='#FCF8B2'" onMouseOut="bgColor='#FFFFFF'">
+                  <td valign="middle" height="27"><a href="http://www.mindphp.com" target="_parent"><span style="color :#4fc1e9"><i class="fa fa-"></i></span> mindphp.com </a></td>
+          </tr>
+          <tr style="border-bottom: dashed 1px #cccccc"  bgcolor="#FFFFFF" onMouseOver="bgColor='#FCF8B2'" onMouseOut="bgColor='#FFFFFF'">
+                  <td valign="middle" height="27"><a href="https://www.djangoproject.com/" target="_parent"><span style="color :#4fc1e9"><i class="fa fa-"></i></span>  Python django </a></td>
+          </tr>
+          <tr style="border-bottom: dashed 1px #cccccc"  bgcolor="#FFFFFF" onMouseOver="bgColor='#FCF8B2'" onMouseOut="bgColor='#FFFFFF'">
+                  <td valign="middle" height="27"><a href="https://wichit2s.gitlab.io/linuxlab/" target="_parent"><span style="color :#4fc1e9"><i class="fa fa-"></i></span>  Linux Lab </a></td>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
+<div class="col-md-9">
+   <div class="panel panel-primary">
+      <div class="panel-heading">ข่าวประชาสัมพันธ์</div>
+      <div class="panel -body">
+        <div class="wrapper">
+          <blockquote>
+            <p>{% block content %}
+              
+              {% endblock %} </p>
+            <p><strong>บทที่ 6 HTML5 video</strong><br>
+              การใส่วีดีโอในเว็บไซต์ที่สร้างจากภาษา HTML5 นั้น ไม่จำเป็นต้องพึ่ง Adobe Flash และ <a data-index="0" data-article-id="2111" data-title="plugin คืออะไร ปลั๊กอิน คือ โปรแกรมเสริม ซึ่งติดตั้งเพื่อเพิ่มประสิทธิภาพการทำงานให้โปรแกรมหลัก" title="plugin คืออะไร ปลั๊กอิน คือ โปรแกรมเสริม ซึ่งติดตั้งเพื่อเพิ่มประสิทธิภาพการทำงานให้โปรแกรมหลัก::plug in  คืออะไรplug in  คือ..." data-desc="plug in  คืออะไรplug in  คือ โปรแกรมเสริมชนิดหนึ่ง ที่จะเพิ่มความสามารถให้กับโปรแกรมหลัก ซึ่งเราจะติดตั้งเพื่อใช้งาน หรือไม่ติดตั้งก็ได้ โดย plug in ถูกออกแบบให้มีความสามารถเฉพาะอย่าง..." data-image="" href="http://mindphp.com/บทเรียนออนไลน์/บทเรียน-html5/2111-plug-in--คืออะไร.html">plugin</a> ใดๆ เพราะใน HTML5 สามารถใช้แท็ก &lt;video&gt; ได้ และไม่ต้อง embed โค้ดยาว ๆ แค่ใส่แท็ก HTML5 สั้น ๆ ไปก็เรียบร้อย<br>
+              <br>
+              ตอนนี้ <a data-index="1" data-article-id="1849" data-title="Web browser (เว็บเบราว์เซอร์) คืออะไร" title="Web browser (เว็บเบราว์เซอร์) คืออะไร::Web browser     ..." data-desc="Web browser       เว็บเบราว์เซอร์ (web browser) เบราว์เซอร์ หรือ โปรแกรมดูเว็บ คือโปรแกรมคอมพิวเตอร์   Web Browser       ..." data-image="http://www.mindphp.com/images/knowledge/112560/browser.png" href="http://mindphp.com/บทเรียนออนไลน์/บทเรียน-html5/1849-web-browser.html">web browser</a>จะใช้ได้กับวีดีโออยู่ video 3 format ดังข้อมูลในตารางด้านล่าง ซึ่งในแต่ละ web browser จะรองรับ Video Format ไม่เหมือนกัน</p>
+          </blockquote>
+          <table width="489" border="0">
+            <tbody>
+              <tr>
+                <td><strong>Browser</strong></td>
+                <td><strong>MP4</strong></td>
+                <td><strong>WebM</strong></td>
+                <td><strong>Ogg</strong></td>
+              </tr>
+              <tr>
+                <td>Internet Explorer 9</td>
+                <td>สนับสนุน</td>
+                <td>ไม่สนับสนุน</td>
+                <td>ไม่สนับสนุน</td>
+              </tr>
+              <tr>
+                <td>Firefox 4.0</td>
+                <td>ไม่สนับสนุน</td>
+                <td>สนับสนุน</td>
+                <td>สนับสนุน</td>
+              </tr>
+              <tr>
+                <td>Google Chrome 6</td>
+                <td>สนับสนุน</td>
+                <td>สนับสนุน</td>
+                <td>สนับสนุน</td>
+              </tr>
+              <tr>
+                <td>Apple Safari 5</td>
+                <td>สนับสนุน</td>
+                <td>ไม่สนับสนุน</td>
+                <td>ไม่สนับสนุน</td>
+              </tr>
+              <tr>
+                <td>Opera 10.6</td>
+                <td>ไม่สนับสนุน</td>
+                <td>สนับสนุน</td>
+                <td>สนับสนุน</td>
+              </tr>
+            </tbody>
+          </table>
+          <blockquote>
+            <p><br>
+              โครงสร้างแท็ก ในการใส่วีดีโอ</p>
+            <pre>&lt;video width="320" height="240" controls="controls"&gt;   &lt;source src="/movie.ogg" type="video/ogg" /&gt;   &lt;source src="/movie.mp4" type="video/mp4" /&gt;   &lt;source src="/movie.webm" type="video/webm" /&gt;   Your browser does not support the video tag.   &lt;/video&gt;</pre>
+            <p>โดยแต่ละ Attribute จาก HTML ด้านบน มีความหมายดังนี้</p>
+            <p>1.control คือปุ่ม control การเล่นวิดีโอ เช่น ปุ่ม play, pause ฯลฯ <br>
+              2.ข้อความ   ?Your browser does not support the video tag.? จะแสดงผลในกรณีที่   Browser ของ user ไม่ support &lt;video&gt; (ตอนนี้ Browser หลายๆ Browser   ยังไม่ support Element นี้) เพราะฉะนั้น ถ้า Browser ไหนไม่ support   มันก็จะไม่เห็นเป็นไฟล์วิดีโอ แต่ขึ้นข้อความบอกให้ user รู้แทน ว่า   browser ของคุณไม่ support นะ <br>
+              3.จาก HTML ด้านบน จะเห็นว่ามีการเรียก   Video format มาตั้ง 3 format เนื่องจากต้องการให้ครอบคลุมทุกๆ browser   เพราะแต่ละบราวเซอร์จะ support video format ไม่เหมือนกัน   (ดังข้อมูลในตาราง) ดังนั้น ถ้าอยากจะให้มัน support ทั้งหมด   ก็ใส่มันเรียงเข้าไปเลย บราวเซอร์ไหน support   อะไรก็จะทำการดึงขึ้นมาแสดงเอง</p>
+            <p>ตัวอย่าง</p>
+            <pre>&lt;html&gt;  &lt;body&gt;    &lt;video width="320" height="240" controls="controls"&gt;    &lt;source src="/movie.mp4" type="video/mp4"&gt;&lt;source src="/movie.ogg" type="video/ogg"&gt;Your browser does not support the video tag.  &lt;/video&gt;    &lt;/body&gt;  &lt;/html&gt;</pre>
+            <p>ผลลัพธ์คือ</p>
+            <p><img src="http://mindphp.com/images/stories/encyclopedia/html510.jpg" alt=""></p>
+            <p>   นอกจากนี้ ยังมี attribute อีกหลายๆตัว เพื่อเพิ่มลูกเล่น และความสะดวกสบายให้กับ Element นี้ด้วย ดังตาราง</p>
+          </blockquote>
+          <table width="582" border="0">
+            <tbody>
+              <tr>
+                <td><strong>Attribute</strong></td>
+                <td><strong>ค่าที่สามารถเรียกใช้งานได้</strong></td>
+                <td><strong>คำอธิบาย</strong></td>
+              </tr>
+              <tr>
+                <td>autoplay</td>
+                <td>autoplay</td>
+                <td>สั่งให้มันเล่นเลยรึเปล่า เมื่อโหลดเพจเสร็จ ถ้าสั่งเป็น autoplay   ก็คือ หลังจากโหลดหน้าเว็บขึ้นมาเสร็จแล้ว มันก็จะเล่นไฟล์วิดีโอเองเลย   แต่ถ้าไม่สั่ง user ต้องคลิกปุ่ม ?Play? ถึงจะเล่น</td>
+              </tr>
+              <tr>
+                <td>controls</td>
+                <td>controls</td>
+                <td>ถ้าสั่ง attribute นี้ จะมีแผงปุ่มต่างๆเพื่อควบคุมการเล่นไฟล์วิดีโอขึ้นมาให้กด</td>
+              </tr>
+              <tr>
+                <td>height</td>
+                <td><em>pixels</em></td>
+                <td>กำหนดความสูงของวิดีโอ (ควรใส่ทุกครั้ง)</td>
+              </tr>
+              <tr>
+                <td>loop</td>
+                <td>loop</td>
+                <td>กำหนดให้ไฟล์วิดีโอเล่นอีกครั้ง หลังมันเล่นจบ แล้วจะวนไปเรื่อยๆ</td>
+              </tr>
+              <tr>
+                <td>poster</td>
+                <td><em>url</em></td>
+                <td>ใส่รูป เหมือนเป็น video preview ก่อนที่มันจะเล่นไฟล์วิดีโอ</td>
+              </tr>
+              <tr>
+                <td>src</td>
+                <td><em>url</em></td>
+                <td>URL ของไฟล์วิดีโอ</td>
+              </tr>
+              <tr>
+                <td>width</td>
+                <td><em>pixels</em></td>
+                <td>กำหนดความกว้างให้ video (ควรใส่ทุกครั้ง)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> 
+      </div>
+   </div> 
+</div>
+</div>
+<div class="container">
+    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+.: Kritsana.com Basic Arduino Tutorial :.
+</marquee>
+</div>
+<div class="container">
+<div class="row">
+  <div class="navbar navbar-inverse navbar-bottom" style="margin-top: 25 px">
+    <h5 id="footer-header" class="font-w" align="center"></h5>
+    <div class="footer-copyright text-center">
+    <p style="color: #ffffff" align="center"> Email : Kritsana.pr.60@ubu.ac.th <br>copyright &copy; 2016 All rught resved design by Kritsana</p>
+    <p style="color: #ffffff" align="center"> </p>
+    <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+    <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+    <div align="center">
+    </div>
+    <br>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  var csrf_token = '{{ csrf_token }}'
+</script>
+</html>
